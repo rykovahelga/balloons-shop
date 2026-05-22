@@ -1,10 +1,12 @@
+import { SectionHeader } from './SectionHeader.js'
+
 export function Footer() {
   return `
     <footer class="footer">
       <div class="footer__container container">
           <div class="footer__inner">
             <div class="footer__info">
-                <p class="footer__title">Контакты</p>
+                ${SectionHeader('Контакты', '')}
                 <a class="footer__number number" href="tel:+78612042446">+7 861 204 24 46</a>
                  <div class="footer__socials-wrap socials-wrap">
                     <a class="footer__social-link social-link" href="instagram.com" target="_blank">
@@ -24,7 +26,7 @@ export function Footer() {
             </div>
 
             <div class="footer__info">
-                <p class="footer__title">Адрес</p>
+                ${SectionHeader('Адрес', '')}
                 <p class="footer__address">Заветный</p>
                 <p class="footer__address footer__address_mob footer__address_last">пр. Лазурный, д.11</p>    
                 <p class="footer__address footer__address_desk footer__address_last">проезд Лазурный, д.11</p>                                
