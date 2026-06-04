@@ -2,7 +2,7 @@ import { SectionHeader } from "./SectionHeader.js";
 
 export function Categories() {
   return `
-    <categories class="categories">
+    <section class="categories">
       <div class="categories__container container">
           <div class="categories__inner">
             <div class="categories__main">
@@ -77,6 +77,6 @@ export function Categories() {
           </div>
         </div>       
       </div>
-    </categories>
+    </section>
   `;
 }
