@@ -13,7 +13,7 @@ export function Discount() {
             </div>      
             <form class="discount__form">
                 <input class="discount__input" type="tel" placeholder="+7">
-                <button class="discount__btn">Получить скидку</button>
+                <button class="discount__btn" type="button" >Получить скидку</button>
             </form>
           </div>
           </div>

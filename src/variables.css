@@ -21,11 +21,13 @@
   --color-1600: #0b0b0b80;
   --color-1700: #fff3ff;
   --color-1800: #c949ca;
-  --color-1900: #323232; 
-  --color-2000: #A9A9A9;
-  --color-2100: #2D2D2D;
-  --color-2200: #6C6C6C;
-  --bg-hero: #A1E2EB;
-
+  --color-1900: #323232;
+  --color-2000: #a9a9a9;
+  --color-2100: #2d2d2d;
+  --color-2200: #6c6c6c;
+  --color-2300: #3a3a3a;
+  --color-2400: #8b8b8b;
+  --color-2500: #ff32a1;
+  --color-2600: #f80000;
+  --bg-hero: #a1e2eb;
 }
-

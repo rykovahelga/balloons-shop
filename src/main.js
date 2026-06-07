@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Home } from "./pages/home.js";
 import { Categories } from "./pages/categories.js";
 import { initBurger } from "./js/header.js";
+import { initDiscountForm } from "./js/discount.js";
 
 const app = document.querySelector("#Balloons-shop");
 
@@ -13,6 +14,7 @@ function render(page) {
   if (page === "home") {
     app.innerHTML = Home();
     initSlider();
+    initDiscountForm();
   }
   if (page === "categories") app.innerHTML = Categories();
 }
