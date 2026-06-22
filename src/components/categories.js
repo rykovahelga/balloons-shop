@@ -1,12 +1,14 @@
 import { SectionHeader } from "./SectionHeader.js";
+import { Breadcrumbs } from "./breadcrumbs.js";
 
-export function Categories() {
+export function Categories(showBreadcrumbs = false, title = "Популярные категории", linkText = "смотреть всё") {
   return `
     <section class="categories">
       <div class="categories__container container">
           <div class="categories__inner">
             <div class="categories__main">
-                ${SectionHeader("Популярные категории", "смотреть всё")}
+                ${SectionHeader(title, linkText)}
+                ${showBreadcrumbs ? Breadcrumbs([{ label: "Главная", href: "/" }, { label: "Каталог" }]) : ""}
                 <ul class="categories__list">
                     <li class="categories__item">
                         <a href="#" class="categories__item-link">

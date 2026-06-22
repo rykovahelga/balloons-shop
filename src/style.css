@@ -3,6 +3,7 @@
 @import "swiper/css/pagination";
 
 @import "./variables.css";
+@import "./styles/breadcrumbs.css";
 @import "./styles/sectionHeader.css";
 @import "./styles/header.css";
 @import "./styles/hero.css";

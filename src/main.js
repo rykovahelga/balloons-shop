@@ -4,7 +4,7 @@ import { Navigation, Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Home } from "./pages/home.js";
-import { Categories } from "./pages/categories.js";
+import { CategoriesPage } from "./pages/categories.js";
 import { initBurger } from "./js/header.js";
 import { initDiscountForm } from "./js/discount.js";
 
@@ -16,7 +16,7 @@ function render(page) {
     initSlider();
     initDiscountForm();
   }
-  if (page === "categories") app.innerHTML = Categories();
+  if (page === "categories") app.innerHTML = CategoriesPage();
 }
 
 function initSlider() {
@@ -38,7 +38,28 @@ function initSlider() {
   });
 }
 
+function initRouter() {
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link) return;
+
+    const href = link.getAttribute("href");
+
+    if (href === "/") {
+      e.preventDefault();
+      render("home");
+    }
+
+    if (href === "/categories") {
+      e.preventDefault();
+      render("categories");
+    }
+  });
+}
+
 window.render = render;
 
-render("home");
+// render("home");
+render("categories");
 initBurger();
+initRouter();

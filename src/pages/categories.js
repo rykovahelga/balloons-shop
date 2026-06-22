@@ -1,10 +1,14 @@
 import { Header } from "../components/header.js";
+import { Breadcrumbs } from "../components/breadcrumbs.js";
+import { Categories } from "../components/categories.js";
+import { Footer } from "../components/footer.js";
 
-export function Categories() {
+export function CategoriesPage() {
   return `
-    <div>
+    <div class="container">
       ${Header()}
-      <h1>HELLO!</h1>
+      ${Categories(true, "Каталог", "")}
+      ${Footer()}
     </div>
   `;
 }
