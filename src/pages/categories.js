@@ -1,5 +1,4 @@
 import { Header } from "../components/header.js";
-import { Breadcrumbs } from "../components/breadcrumbs.js";
 import { Categories } from "../components/categories.js";
 import { Footer } from "../components/footer.js";
 

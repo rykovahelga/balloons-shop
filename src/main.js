@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Home } from "./pages/home.js";
 import { CategoriesPage } from "./pages/categories.js";
+import { GalleryPage } from "./pages/gallery";
 import { initBurger } from "./js/header.js";
 import { initDiscountForm } from "./js/discount.js";
 
@@ -17,6 +18,7 @@ function render(page) {
     initDiscountForm();
   }
   if (page === "categories") app.innerHTML = CategoriesPage();
+  if (page === "gallery") app.innerHTML = GalleryPage();
 }
 
 function initSlider() {
@@ -54,12 +56,18 @@ function initRouter() {
       e.preventDefault();
       render("categories");
     }
+
+    if (href === "/gallery") {
+      e.preventDefault();
+      render("gallery");
+    }
   });
 }
 
 window.render = render;
 
 // render("home");
-render("categories");
+// render("categories");
+render("gallery");
 initBurger();
 initRouter();
