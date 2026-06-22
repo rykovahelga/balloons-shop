@@ -16,9 +16,16 @@ function render(page) {
     app.innerHTML = Home();
     initSlider();
     initDiscountForm();
+    initBurger();
   }
-  if (page === "categories") app.innerHTML = CategoriesPage();
-  if (page === "gallery") app.innerHTML = GalleryPage();
+  if (page === "categories") {
+    app.innerHTML = CategoriesPage();
+    initBurger();
+  }
+  if (page === "gallery") {
+    app.innerHTML = GalleryPage();
+    initBurger();
+  }
 }
 
 function initSlider() {
@@ -66,8 +73,7 @@ function initRouter() {
 
 window.render = render;
 
-// render("home");
+render("home");
 // render("categories");
-render("gallery");
-initBurger();
+// render("gallery");
 initRouter();
